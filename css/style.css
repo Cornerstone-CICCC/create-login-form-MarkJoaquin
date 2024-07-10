@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+img,
+video,
+svg {
+  height: auto;
+  max-width: 100%;
+}
+
+html {
+  overflow: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 1em;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------------- */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #191816;
+  color: #afb6c2;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto 1fr;
+  grid-template-areas: "header img" "logIn img";
+  height: 100vh;
+}
+main header {
+  display: block;
+  padding: 2rem;
+  grid-area: header;
+}
+main header img {
+  max-width: 8rem;
+}
+main #logIn {
+  grid-area: logIn;
+  place-items: center;
+  margin: auto;
+}
+main #logIn header {
+  margin-bottom: 2rem;
+}
+main #logIn header img {
+  max-width: 8rem;
+}
+main #logIn #form {
+  background-color: #24221f;
+  padding: 3rem 5em;
+  border-radius: 0.5rem;
+}
+main #logIn #form #title {
+  display: flex;
+  gap: 0.8rem;
+  padding-bottom: 0.8rem;
+}
+main #logIn #form #title p {
+  color: #d4ccb6;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+main #logIn #form #instructions {
+  padding-bottom: 2rem;
+}
+main #logIn #form form label {
+  display: block;
+  padding: 0.2rem;
+}
+main #logIn #form form .inputContainer {
+  position: relative;
+  width: 300px;
+  padding-bottom: 1rem;
+}
+main #logIn #form form .inputContainer input {
+  background-color: transparent;
+  border: rgba(175, 182, 194, 0.3) 0.2rem solid;
+  border-radius: 0.5rem;
+  width: 100%;
+  padding: 10px 40px 10px 35px;
+  color: #d4ccb6;
+}
+main #logIn #form form .inputContainer input::-moz-placeholder {
+  padding-left: 0.2rem;
+}
+main #logIn #form form .inputContainer input::placeholder {
+  padding-left: 0.2rem;
+}
+main #logIn #form form .inputContainer input:focus {
+  border: #ffc632 0.2rem solid;
+  border-radius: 0.5rem;
+  outline: none;
+  caret-color: transparent;
+}
+main #logIn #form form .inputContainer .icon {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 35%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transition: color 0.3s;
+  padding-left: 0.5rem;
+}
+main #logIn #form form .inputContainer #watchPass {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 90%;
+  cursor: pointer;
+  transform: translateY(-175%);
+}
+main #logIn #form form .inputContainer #watchPass #eye-closed {
+  display: none;
+}
+main #logIn #form form .inputContainer #icon-focus {
+  display: none;
+}
+main #logIn #form form .inputContainer input:focus + #icon-default {
+  display: none;
+}
+main #logIn #form form .inputContainer input:focus + #icon-default + #icon-focus {
+  display: flex;
+}
+main #logIn #form form #options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+}
+main #logIn #form form #options #checkBox {
+  display: flex;
+  align-items: center;
+}
+main #logIn #form form #options #checkBox #remind {
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  height: 1.2rem;
+  width: 1.2rem;
+  border: 1px solid #afb6c2;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+main #logIn #form form #options #checkBox #remind:after {
+  content: url(/images/check.svg);
+  display: none;
+}
+main #logIn #form form #options #checkBox #remind:hover {
+  background-color: rgba(255, 197, 50, 0.4666666667);
+}
+main #logIn #form form #options #checkBox #remind:checked {
+  background-color: #ffc632;
+}
+main #logIn #form form #options #checkBox #remind:checked::after {
+  display: block;
+}
+main #logIn #form form #options #checkBox label {
+  cursor: pointer;
+  font-weight: 300;
+}
+main #logIn #form form #options p {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #ffc632;
+  cursor: pointer;
+  white-space: nowrap;
+}
+main #logIn #form form button {
+  width: 100%;
+  background-color: #ffc632;
+  padding: 0.5rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  margin: 1rem 0;
+}
+main #logIn #form form #createAcc {
+  display: flex;
+  justify-content: center;
+  color: #ffc632;
+  gap: 0.2rem;
+}
+main #logIn #form form #createAcc span {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+#img {
+  grid-area: img;
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  /* background: url(/images/side-image.jpg) center/cover no-repeat; */
+}
+#img img {
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+  -o-object-position: center;
+     object-position: center;
+  height: 100vh;
+}
+
+@media only screen and (max-width: 770px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+  main #logIn #form {
+    background: none;
+    padding: 0;
+    border-radius: 0;
+  }
+  main #img {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */

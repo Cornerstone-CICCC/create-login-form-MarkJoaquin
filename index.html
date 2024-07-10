@@ -1,11 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
-    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+    <title>Camp-in</title>
   </head>
-  <body></body>
+  <body>
+    <main>
+      <header>
+        <img src="/images/logo.svg" alt="Camp-in" />
+      </header>
+      <section id="logIn">
+        <div id="form">
+          <div id="title">
+            <img src="/images/log-in.svg" alt="log-in" />
+            <p>Login</p>
+          </div>
+          <div id="instructions">
+            <p>Insert your information below.</p>
+          </div>
+
+          <form action="#" id="myForm">
+            <label for="email">E-mail</label>
+
+            <div class="inputContainer">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Type your email"
+                autocomplete="email"
+                pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+              />
+              <span class="icon" id="icon-default">
+                <img src="/images/mail.svg" alt="mail-default" />
+              </span>
+              <span class="icon" id="icon-focus">
+                <img src="/images/mail-focus.svg" alt="mail-focus" />
+              </span>
+            </div>
+
+            <label for="pass">Password</label>
+            <div class="inputContainer">
+              <input
+                type="password"
+                name="pass"
+                id="pass"
+                placeholder="Type your password"
+                autocomplete="off"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                title="Password must has at least one uppercase and one digit"
+              />
+              <span class="icon" id="icon-default">
+                <img src="/images/lock.svg" alt="lock-default" />
+              </span>
+              <span class="icon" id="icon-focus">
+                <img src="/images/lock-focus.svg" alt="lock-focus" />
+              </span>
+
+              <div id="watchPass">
+                <span id="eye" class="eye-icon">
+                  <img src="/images/eye.svg" alt="eye" />
+                </span>
+
+                <span id="eye-closed" class="eye-icon">
+                  <img src="/images/eye-slash-regular.svg" alt="eye-closed" />
+                </span>
+              </div>
+            </div>
+            <div id="options">
+              <div id="checkBox">
+                <input type="checkbox" name="remind" id="remind" />
+                <label for="remind">Remind me</label>
+              </div>
+              <p>Forgot my password</p>
+            </div>
+            <button type="submit" id="submitBtn">LOGIN</button>
+            <p id="createAcc">Don't have an account? <span> Sign up!</span></p>
+          </form>
+        </div>
+      </section>
+      <section id="img">
+        <img src="/images/side-image-2x.jpg" alt="" />
+      </section>
+    </main>
+    <script src="/script.js"></script>
+  </body>
 </html>
