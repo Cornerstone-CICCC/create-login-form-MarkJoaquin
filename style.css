@@ -177,7 +177,7 @@ main #logIn #form form #options #checkBox #remind {
   justify-content: center;
 }
 main #logIn #form form #options #checkBox #remind:after {
-  content: url(/images/check.svg);
+  content: url(images/check.svg);
   display: none;
 }
 main #logIn #form form #options #checkBox #remind:hover {
